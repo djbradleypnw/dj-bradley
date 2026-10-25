@@ -1,114 +1,329 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>DJ Bradley | Wedding DJ</title>
-
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #222;
-    background:
-    radial-gradient(circle at 20% 20%, rgba(255,140,50,.35), transparent 35%),
-    radial-gradient(circle at 80% 70%, rgba(40,120,255,.30), transparent 40%),
-    linear-gradient(135deg, #fafafa, #eeeeee);
-}
-
-.container {
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(10px);
-    width: 90%;
-    max-width: 500px;
-    padding: 50px 35px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,.12);
-}
-
-h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 18px;
-    margin-bottom: 35px;
-    color: #555;
-}
-
-.button {
-    display: block;
-    width: 100%;
-    padding: 18px;
-    margin: 18px 0;
-    border-radius: 12px;
-    text-decoration: none;
-    background: #111;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.button:hover {
-    background: #444;
-}
-
-.email {
-    margin-top: 35px;
-    font-size: 16px;
-    color: #555;
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="Wedding DJ and professional MC serving Eastern Washington, Northern Idaho, and Western Montana. Personalized music, confident hosting, and unforgettable celebrations.">
+  <title>Wedding DJ &amp; MC | DJ Bradley</title>
+  <style>
+    :root {
+      --ink: #171615; --cream: #f8f3df; --paper: #fffdf7; --muted: #c9c3b7;
+      --gold: #d7b878; --line: rgba(255,255,255,.18); --sage: #dce9d9;
+      --serif: Georgia, "Times New Roman", serif; --sans: Arial, Helvetica, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: #11100f; color: #f8f5ee; font-family: var(--sans); line-height: 1.6; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(17,16,15,.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .nav { max-width: 1440px; width: 100%; margin: auto; padding: 15px 34px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { margin-right: auto; }
+    .nav-links { margin-left: auto; gap: 30px; }
+    .nav-cta { margin-left: 8px; white-space: nowrap; }
+    .brand { text-decoration: none; font-size: .84rem; letter-spacing: .25em; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 24px; font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; }
+    .nav-links a { text-decoration: none; opacity: .84; }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .dropdown { position: relative; }
+    .dropdown summary { cursor: pointer; list-style: none; text-transform: uppercase; letter-spacing: .1em; font-size: .76rem; }
+    .dropdown summary::-webkit-details-marker { display:none; }
+    .dropdown summary::after { content: "⌄"; padding-left: 7px; }
+    .dropdown-menu { position: absolute; right: 0; top: calc(100% + 16px); min-width: 220px; padding: 10px; background: #201e1b; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 18px 40px #0008; }
+    .dropdown-menu a { display: block; padding: 10px 12px; border-radius: 6px; }
+    .dropdown-menu a:hover { background: #ffffff12; }
+    .nav-cta, .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; border: 1px solid var(--gold); padding: 12px 18px; border-radius: 3px; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; transition: .2s ease; cursor: pointer; }
+    .nav-cta, .btn-gold { color: #181512; background: var(--cream); border-color: var(--cream); }
+    .btn-outline { color: #fff; background: transparent; }
+    .btn:hover, .nav-cta:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .hero { min-height: 690px; position: relative; isolation: isolate; display: flex; align-items: center; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background:
+      radial-gradient(ellipse at 9% 60%, rgba(255,180,90,.75) 0, rgba(255,180,90,.18) 2%, transparent 16%),
+      radial-gradient(ellipse at 24% 30%, rgba(255,203,110,.6) 0, rgba(255,203,110,.15) 3%, transparent 19%),
+      radial-gradient(ellipse at 67% 18%, rgba(255,184,72,.38) 0, transparent 25%),
+      radial-gradient(ellipse at 80% 64%, rgba(255,139,52,.35) 0, transparent 24%),
+      linear-gradient(120deg, #17150f 0%, #322817 38%, #11100f 100%); filter: saturate(.85); }
+    .hero::after { content:""; position:absolute; inset:0; z-index:-1; background: linear-gradient(90deg, rgba(12,11,10,.78), rgba(12,11,10,.28) 57%, rgba(12,11,10,.55)), linear-gradient(0deg,#11100f 0%,transparent 25%); }
+    .hero-inner { width: min(1440px, 100%); margin: auto; padding: 90px 34px 110px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr); gap: 36px; align-items: center; }
+    .hero-inner > div:first-child { justify-self: start; }
+    .hero-copy { max-width: none; width: max-content; max-width: 100%; white-space: nowrap; font-size: clamp(.95rem, 1.5vw, 1.28rem); }
+    .hero-side { align-self: start; margin-top: -18px; }
+    .eyebrow { letter-spacing: .28em; text-transform: uppercase; font-size: .72rem; color: var(--gold); }
+    h1, h2, h3 { font-weight: 400; }
+    h1 { font: clamp(3.2rem, 7vw, 6.5rem)/.98 var(--serif); letter-spacing: -.04em; margin: 24px 0; max-width: 760px; }
+    .hero-copy { max-width: 520px; font: italic 1.28rem/1.5 var(--serif); color: #e7dfd1; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+    .hero-side { justify-self: end; align-self: end; text-align: right; padding-bottom: 24px; text-transform: uppercase; letter-spacing: .2em; font-size: .82rem; line-height: 2.1; color: #f0e8d9; }
+    .hero-side .rule { width: 90px; height: 1px; background: var(--gold); margin: 20px 0 20px auto; }
+    .feature-strip { background: var(--cream); color: #27231c; display:grid; grid-template-columns:repeat(4,1fr); padding: 26px max(20px, calc((100% - 1180px)/2)); }
+    .feature { padding: 8px 22px; text-align:center; border-right:1px solid #bdb49b; }
+    .feature:last-child { border-right:0; }
+    .feature-icon { font-size: 1.65rem; display:block; margin-bottom: 7px; }
+    .feature strong { display:block; font-size:.77rem; letter-spacing:.12em; text-transform:uppercase; }
+    .feature p { font: italic .9rem var(--serif); color:#6b6254; margin-top:4px; }
+    section.content-section { padding: 100px 24px; }
+    .section-inner { max-width: 1060px; margin: auto; }
+    .section-head { max-width: 720px; margin-bottom: 40px; }
+    .section-head h2 { font: clamp(2.5rem, 5vw, 4rem)/1.05 var(--serif); margin: 15px 0 20px; }
+    .section-head p { color: #c9c3b7; max-width: 720px; }
+    .experience-grid { display:grid; grid-template-columns: .95fr 1.05fr; gap: 44px; align-items:center; }
+    .video-frame { aspect-ratio: 9/16; max-height: 520px; width: 100%; max-width: 300px; justify-self:center; overflow:hidden; border:1px solid #ffffff25; background:#211e18; border-radius:8px; }
+    .video-frame iframe { width:100%;height:100%;border:0; }
+    .experience-copy { font: 1.25rem/1.75 var(--serif); color:#e5ded2; }
+    .experience-copy p + p { margin-top:20px; }
+    .services { background:#f2eddf; color:#25221d; }
+    .services .section-head p { color:#625b50; }
+    .service-card { border:1px solid #d6cbb4; padding:clamp(25px,5vw,48px); display:grid; grid-template-columns:1fr auto; gap:24px; align-items:start; background:#fbf8ef; }
+    .service-card h3 { font:2.2rem var(--serif); margin-bottom:8px; }
+    .price { font:2.7rem var(--serif); white-space:nowrap; }
+    .price small { display:block; font: .7rem var(--sans); letter-spacing:.15em; text-align:right; color:#6b6254; text-transform:uppercase; }
+    .service-card p { color:#625b50; max-width:680px; }
+    .included { display:grid; grid-template-columns:repeat(2,1fr); gap:13px 26px; list-style:none; margin:26px 0; }
+    .included li::before { content:"✦"; color:#9a7841; padding-right:10px; }
+    .playlist-note { border-top:1px solid #ded4bf; margin-top:20px; padding-top:16px; max-width:760px; }
+    .playlist-note strong { display:block; font:1.08rem var(--serif); margin-bottom:4px; }
+    .service-extra { margin-top:12px; font-size:.9rem; color:#625b50; }
+    .gallery-note { border:1px dashed #6e665b; padding:45px 24px; text-align:center; color:#c9c3b7; }
+    .booking { background: radial-gradient(ellipse at 85% 10%, #413725 0%, transparent 32%), #171614; }
+    .booking-grid { display:grid; grid-template-columns:1fr .85fr; gap:50px; align-items:start; }
+    .booking-form, .info-card { border:1px solid var(--line); padding:clamp(22px,4vw,36px); background:#ffffff06; }
+    .field { margin-bottom:17px; }
+    .field label { display:block; margin-bottom:7px; color:#e3dccc; font-size:.78rem; letter-spacing:.08em; }
+    .field input, .field select, .field textarea { width:100%; padding:13px 14px; background:#f8f4e9; color:#211f1a; border:1px solid #d2c9b8; border-radius:3px; }
+    .field textarea { min-height:90px; resize:vertical; }
+    .form-note { color:#c9c3b7; font-size:.85rem; margin:13px 0 18px; }
+    .status { display:none; margin-top:18px; padding:17px; border-radius:5px; }
+    .status.available { background:#e5f4e4; color:#1f5728; }
+    .status.unavailable { background:#f8e9dc; color:#6c301e; }
+    .status strong { display:block; margin-bottom:4px; }
+    .status .check { font-size:1.5rem; margin-right:7px; }
+    .contact-line { margin-top:22px; color:#d8d0c2; font-size:.92rem; }
+    .contact-line a { color:#fff1c9; }
+    .info-card h3 { font:1.8rem var(--serif); margin-bottom:10px; }
+    .info-card p { color:#c9c3b7; margin-bottom:18px; }
+    .info-card .small { font-size:.82rem; }
+    .portal-callout { border-top:1px solid var(--line); margin-top:25px; padding-top:22px; }
+    .footer { padding:55px 24px 40px; text-align:center; background:#0b0b0a; }
+    .footer h2 { font:clamp(2.5rem,5vw,4rem) var(--serif); margin:10px 0; }
+    .footer p { color:#c9c3b7; margin:8px auto; max-width:620px; }
+    .footer .email-button { margin-top:20px; }
+    .footer .region { font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; margin-top:25px; }
+    .disclaimer { font-size:.72rem; opacity:.7; margin-top:30px !important; }
+    @media (max-width:760px) {
+      .nav { padding:13px 16px; align-items:flex-start; gap:12px; }
+      .brand { margin-right: 0; }
+      .nav-links { margin-left: auto; gap:12px; }
+      .nav-cta { display:none; }
+      .hero-copy { white-space: normal; width: auto; max-width: 100%; }
+      .nav-links { gap:12px; flex-wrap:wrap; justify-content:flex-end; font-size:.65rem; }
+      .nav-cta { display:none; }
+      .hero { min-height:630px; }
+      .hero-inner { grid-template-columns:1fr; gap:25px; padding:70px 23px 100px; }
+      .hero-side { justify-self:start; text-align:left; padding:0; line-height:1.8; }
+      .hero-side .rule { margin-left:0; }
+      .feature-strip { grid-template-columns:repeat(2,1fr); padding:18px 10px; }
+      .feature { padding:14px 8px; }
+      .feature:nth-child(2) { border-right:0; }
+      .feature:nth-child(-n+2) { border-bottom:1px solid #bdb49b; }
+      section.content-section { padding:70px 20px; }
+      .experience-grid, .booking-grid { grid-template-columns:1fr; gap:28px; }
+      .video-frame { max-height:500px; }
+      .service-card { grid-template-columns:1fr; }
+      .price { text-align:left; }
+      .price small { text-align:left; }
+      .included { grid-template-columns:1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *, *::before, *::after { transition:none !important; } }
+  </style>
 </head>
-
-
 <body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#home">DJ BRADLEY</a>
+    <div class="nav-links">
+      <a href="#experience">The Experience</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Check Your Date</a>
+      <details class="dropdown">
+        <summary>Couples</summary>
+        <div class="dropdown-menu">
+          <a href="#client-access">Wedding Planning Sheet</a>
+          <a href="#agreement">Booking Agreement</a>
+        </div>
+      </details>
+    </div>
+    <a class="nav-cta" href="#booking">Inquire About Your Date</a>
+  </nav>
+</header>
 
-<div class="container">
+<main>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">DJ Bradley · Wedding DJ &amp; Professional MC</p>
+        <h1>Your moments.<br>Our music.</h1>
+        <p class="hero-copy">For the moments that matter and the songs that make them.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#booking">Check Your Date</a>
+          <a class="btn btn-outline" href="#experience">The DJ/MC in action</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div>ceremonies<br>receptions<br>dancing<br>cocktail hour<br>MC services<br>sound &amp; lighting</div>
+        <div class="rule"></div>
+      </div>
+    </div>
+  </section>
 
-<h1>DJ Bradley</h1>
+  <div class="feature-strip" aria-label="Service highlights">
+    <div class="feature"><span class="feature-icon" aria-hidden="true">♫</span><strong>Personalized playlists</strong><p>Music shaped around you</p></div>
+    <div class="feature"><span class="feature-icon" aria-hidden="true">♬</span><strong>Professional sound</strong><p>Clear sound for key moments</p></div>
+    <div class="feature"><span class="feature-icon" aria-hidden="true">♩</span><strong>MC &amp; coordination</strong><p>Easy, confident transitions</p></div>
+    <div class="feature"><span class="feature-icon" aria-hidden="true">♡</span><strong>Made for your day</strong><p>Calm planning, joyful energy</p></div>
+  </div>
 
-<p class="subtitle">
-Wedding DJ &amp; Emcee Services
-</p>
+  <section class="content-section" id="experience">
+    <div class="section-inner experience-grid">
+      <div class="section-head">
+        <p class="eyebrow">The Experience</p>
+        <h2>More than music.<br>A feeling.</h2>
+        <p class="experience-copy">Your wedding deserves more than someone pressing play. From the first announcement to the final song, I bring music, pacing, and a steady presence that helps your celebration feel natural and unforgettable.</p>
+      </div>
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/0ZAQ4J4M-Sc?playsinline=1&rel=0" title="The DJ/MC in action — DJ Bradley" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
+  <section class="content-section services" id="services">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; Pricing</p>
+        <h2>A thoughtful soundtrack<br>for your celebration.</h2>
+        <p>Professional DJ and MC services with seamless transitions, meaningful moments, and the right music to keep your wedding flowing naturally from “I do” to the dance floor.</p>
+      </div>
+      <div class="service-card">
+        <div>
+          <h3>Wedding DJ &amp; MC Package</h3>
+          <p>Professional DJ/Emcee services with sound, reception announcements, lighting and music planning tailored to your day.</p>
+          <ul class="included">
+            <li>Professional DJ and MC services</li>
+            <li>Professional sound system</li>
+            <li>Reception announcements and coordination</li>
+            <li>Wedding music planning</li>
+            <li>One planning consultation</li>
+            <li>Personalized support for key moments</li>
+            <li>Price includes 5 hours of service, with add-ons available</li>
+          </ul>
+          <div class="playlist-note">
+            <strong>Your playlist, your way</strong>
+            <p>Have a playlist already? I’m happy to work with your chosen songs and preferences, including specific timestamps and fade-in or fade-out points for entrances, dances, and other meaningful moments.</p>
+          </div>
+          <p class="service-extra">Need a little more time? Additional hours are just <strong>$100 per hour</strong>, subject to availability and venue requirements.</p>
+        </div>
+        <div class="price">$1,200<small>Five-hour package</small></div>
+      </div>
+    </div>
+  </section>
 
-<a class="button" href="https://square.link/u/nx0mEi4B">
-Reserve Your Wedding Date<br>
-$100 Retainer Fee
-</a>
+  <section class="content-section" id="moments">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">A Few Moments</p>
+        <h2>Memories in the making.</h2>
+      </div>
+      <div class="gallery-note">Wedding photos and event highlights coming soon.</div>
+    </div>
+  </section>
 
+  <section class="content-section booking" id="booking">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">Start With Your Date</p>
+        <h2>Let’s see if your day is available.</h2>
+        <p>Share a few details and I’ll help you take the next step. Live Google Calendar availability is not connected yet, so this form does not confirm date availability or reserve a date.</p>
+      </div>
+      <div class="booking-grid">
+        <form class="booking-form" id="availability-form">
+          <div class="field"><label for="couple">Your names</label><input id="couple" name="couple" placeholder="Names of the couple" required></div>
+          <div class="field"><label for="wedding-date">Wedding date</label><input id="wedding-date" name="weddingDate" type="date" required></div>
+          <div class="field"><label for="venue">Venue / city</label><input id="venue" name="venue" placeholder="Venue name or city" required></div>
+          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+          <div class="field"><label for="notes">Anything you’d like me to know? (optional)</label><textarea id="notes" name="notes" placeholder="Tell me a little about your day"></textarea></div>
+          <button class="btn btn-gold" type="submit">Request Date Availability</button>
+          <p class="form-note">This sends an email inquiry. Your date is only reserved after availability and payment are confirmed.</p>
+          <div class="status available" id="available-status" role="status" aria-live="polite"><strong><span class="check">✓</span>Inquiry ready</strong>Your details are ready to send by email. This is not a live calendar confirmation. Use the email button below to send your inquiry.</div>
+          <div class="status unavailable" id="unavailable-status" role="status" aria-live="polite"><strong>Already have another DJ?</strong>If I’m unavailable, I may be able to recommend another excellent DJ. Send me an email and I’ll check whether a referral may be possible.</div>
+          <p id="email-result" class="form-note" hidden></p>
+        </form>
+        <aside class="info-card">
+          <p class="eyebrow">Reserve Your Date</p>
+          <h3>Five hours. One unforgettable celebration.</h3>
+          <p>The full five-hour package is $1,200. A $100 retainer reserves your date, and the remaining $1,100 is due 30 days before your wedding.</p>
+          <p class="small">The Square payment links below are your existing links. Please note that payment alone is not automatically verified by this static website, and date blocking is not active yet.</p>
+          <a class="btn btn-gold" href="https://square.link/u/nx0mEi4B" target="_blank" rel="noopener">Pay $100 Retainer</a>
+          <p class="contact-line">Questions before booking? <a href="mailto:Djbradleypnw@gmail.com?subject=Wedding%20DJ%20Consultation">Request a callback or video consultation</a>.</p>
+          <div class="portal-callout" id="client-access">
+            <h3>For booked couples</h3>
+            <p>Once the secure client portal is connected, couples will be able to return to their planning sheet, update details, and save progress.</p>
+            <a href="mailto:Djbradleypnw@gmail.com?subject=Wedding%20Planning%20Portal%20Access" class="btn btn-outline">Request Client Portal Access</a>
+          </div>
+          <div class="portal-callout" id="agreement">
+            <h3>Booking agreement</h3>
+            <p>Your agreement and e-signature workflow will be made available here after the secure signing integration is configured.</p>
+            <a href="mailto:Djbradleypnw@gmail.com?subject=Wedding%20DJ%20Agreement" class="btn btn-outline">Request Agreement</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
 
-<a class="button" href="https://square.link/u/Zla2xxBU">
-Complete Wedding Package Payment<br>
-$1,100 Balance
-</a>
+<footer class="footer" id="contact">
+  <p class="eyebrow">Let’s Make It Yours</p>
+  <h2>Tell me what you’re dreaming up.</h2>
+  <p>Let’s make a wedding celebration that feels personal, joyful, and unmistakably yours.</p>
+  <a class="btn btn-gold email-button" href="mailto:Djbradleypnw@gmail.com">Email DJ Bradley</a>
+  <p class="region">Serving Eastern Washington, Northern Idaho &amp; Western Montana</p>
+  <p class="disclaimer">Availability checking, automatic payment verification, e-signatures, and the private planning portal require backend integrations before they can be used as live booking features.</p>
+</footer>
 
+<script>
+  // This is intentionally an email-inquiry fallback, not a fake availability check.
+  // Connect a secure backend and Google Calendar before showing a true available/unavailable result.
+  const form = document.getElementById('availability-form');
+  const dateInput = document.getElementById('wedding-date');
+  const today = new Date();
+  const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  dateInput.min = localToday;
 
-<p class="email">
-Djbradleypnw@gmail.com
-</p>
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
 
+    const data = new FormData(form);
+    const subject = `Wedding DJ availability inquiry — ${data.get('weddingDate')}`;
+    const body = [
+      `Names: ${data.get('couple')}`,
+      `Wedding date: ${data.get('weddingDate')}`,
+      `Venue / city: ${data.get('venue')}`,
+      `Email: ${data.get('email')}`,
+      `Notes: ${data.get('notes') || 'None provided'}`,
+      '',
+      'Please confirm whether the date is available. This message is an inquiry only.'
+    ].join('\n');
 
-</div>
-
+    document.getElementById('available-status').style.display = 'block';
+    document.getElementById('unavailable-status').style.display = 'none';
+    const link = `mailto:Djbradleypnw@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const result = document.getElementById('email-result');
+    result.hidden = false;
+    result.innerHTML = 'Your email app should open with your inquiry. If it does not, <a href="' + link + '" style="color:#fff1c9">tap here to email DJ Bradley</a>.';
+    window.location.href = link;
+  });
+</script>
 </body>
-
 </html>
