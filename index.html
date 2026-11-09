@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -107,6 +107,8 @@
       border-color: var(--cream);
     }
 
+    /* HERO */
+
     .hero {
       min-height: 760px;
       min-height: min(900px, 100svh);
@@ -135,6 +137,15 @@
       text-transform: uppercase;
     }
 
+    /* Match the hero eyebrow font to DJ Bradley branding */
+
+    .hero .eyebrow {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: .18em;
+    }
+
     h1, h2, h3 {
       font-family: var(--serif);
       font-weight: 500;
@@ -147,12 +158,15 @@
       letter-spacing: -.025em;
     }
 
+    /* Cursive tagline - the only cursive text on the website */
+
     .hero-tagline {
       margin: 0;
       color: var(--cream);
-      font-family: var(--serif);
-      font-size: clamp(25px, 3vw, 36px);
-      font-style: italic;
+      font-family: "Allura", cursive;
+      font-size: clamp(25px, 2.5vw, 32px);
+      font-weight: 400;
+      font-style: normal;
     }
 
     .hero-actions {
@@ -180,9 +194,16 @@
       font-size: 16px;
     }
 
+    /* EXPERIENCE */
+
     .experience {
       background: var(--black-soft);
       text-align: center;
+    }
+
+    .experience .section-heading h2 {
+      font-size: clamp(38px, 5vw, 58px);
+      margin: 13px 0 28px;
     }
 
     .experience-copy {
@@ -200,6 +221,24 @@
       background: var(--gold);
     }
 
+    /* EXPERIENCE VIDEO */
+
+    .video-frame {
+      width: min(360px, 100%);
+      aspect-ratio: 9 / 16;
+      margin: 0 auto 40px;
+      border: 1px solid var(--line);
+      background: #080808;
+    }
+
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* SERVICES */
+
     .services { background: var(--black); }
 
     .service-intro {
@@ -210,24 +249,29 @@
       font-size: 16px;
     }
 
+    /* Light tan service panels */
+
     .service-panel {
       display: grid;
       grid-template-columns: .9fr 1.1fr;
-      background: var(--panel);
-      border: 1px solid var(--line);
+      background: #e8dfcf;
+      border: 1px solid #d4c6ae;
     }
 
     .service-copy {
       padding: 48px;
-      border-right: 1px solid var(--line);
+      border-right: 1px solid #cbbda5;
     }
 
     .service-copy h3 {
       margin: 0 0 20px;
       font-size: 37px;
+      color: #29251f;
     }
 
-    .service-copy p { color: var(--muted); }
+    .service-copy p {
+      color: #62594d;
+    }
 
     .service-list {
       display: grid;
@@ -241,7 +285,7 @@
     .service-list li {
       display: flex;
       gap: 12px;
-      color: var(--cream);
+      color: #29251f;
       font-size: 14px;
       line-height: 1.6;
     }
@@ -249,8 +293,10 @@
     .service-list li::before {
       content: "✦";
       flex: 0 0 auto;
-      color: var(--gold);
+      color: #a88750;
     }
+
+    /* DATE AVAILABILITY */
 
     .date-section {
       background: var(--black-soft);
@@ -277,9 +323,11 @@
       font-size: 13px;
     }
 
+    /* Dark charcoal inquiry box */
+
     .inquiry-card {
       padding: 38px;
-      background: var(--panel);
+      background: #171715;
       border: 1px solid var(--line);
     }
 
@@ -357,6 +405,8 @@
       margin-top: 10px;
     }
 
+    /* RESERVE YOUR DATE */
+
     .reserve-section {
       background:
         linear-gradient(rgba(10,10,9,.88), rgba(10,10,9,.92)),
@@ -400,30 +450,7 @@
       margin-top: 27px;
     }
 
-    .video-section {
-      padding-top: 85px;
-      background: var(--black-soft);
-      text-align: center;
-    }
-
-    .video-section h2 {
-      margin: 13px 0 28px;
-      font-size: 48px;
-    }
-
-    .video-frame {
-      width: min(360px, 100%);
-      aspect-ratio: 9 / 16;
-      margin: 0 auto;
-      border: 1px solid var(--line);
-      background: #080808;
-    }
-
-    .video-frame iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
+    /* FOOTER */
 
     footer {
       padding: 35px 0;
@@ -444,33 +471,61 @@
       color: var(--gold-light);
     }
 
+    /* TABLET RESPONSIVENESS */
+
     @media (max-width: 800px) {
       .hero { min-height: 760px; }
-      .service-panel, .date-layout { grid-template-columns: 1fr; }
+
+      .service-panel, .date-layout {
+        grid-template-columns: 1fr;
+      }
+
       .service-copy {
         border-right: 0;
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid #cbbda5;
       }
+
       .date-layout { gap: 35px; }
     }
 
+    /* MOBILE RESPONSIVENESS */
+
     @media (max-width: 560px) {
-      .container { width: min(100% - 32px, 1120px); }
+      .container {
+        width: min(100% - 32px, 1120px);
+      }
+
       .site-header { padding: 18px 0; }
+
       .brand { font-size: 25px; }
+
       .header-inner .button {
         min-height: 42px;
         padding: 9px 12px;
         font-size: 9px;
       }
+
       .hero { min-height: 720px; }
+
       .hero-content { padding-top: 100px; }
+
       section { padding: 78px 0; }
-      .hero-actions { align-items: stretch; flex-direction: column; max-width: 280px; }
-      .service-copy, .service-list, .inquiry-card { padding: 27px 22px; }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 280px;
+      }
+
+      .service-copy, .service-list, .inquiry-card {
+        padding: 27px 22px;
+      }
+
       .service-list { grid-template-columns: 1fr; }
+
       .reserve-card { padding: 38px 22px; }
     }
+
   </style>
 </head>
 
@@ -484,35 +539,68 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
+
     <section class="hero" id="top">
       <div class="container">
         <div class="hero-content">
+
           <div class="eyebrow">Wedding DJ & MC · Pacific Northwest</div>
+
           <h1>DJ Bradley</h1>
-          <p class="hero-tagline">Creating the moments that matter</p>
+
+          <p class="hero-tagline">
+            Creating space for the moments that matter most
+          </p>
+
           <div class="hero-actions">
             <a class="button" href="#date">Check your date</a>
-            <a class="button button-outline" href="#party">Getting the party started</a>
+            <a class="button button-outline" href="#experience">Getting the party started</a>
           </div>
+
         </div>
       </div>
     </section>
+
+    <!-- THE EXPERIENCE -->
 
     <section class="experience" id="experience">
       <div class="container">
+
         <div class="section-heading">
+
           <div class="eyebrow">The Experience</div>
-          <h2>Creating space for unforgettable moments</h2>
+
+          <h2>A Little Taste of the Energy</h2>
+
           <div class="gold-rule"></div>
+
         </div>
+
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/0ZAQ4J4M-Sc"
+            title="DJ Bradley wedding DJ video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+
         <p class="experience-copy">
           It's your day, your people, and your kind of party. From the big moments to a packed dance floor, I'm here to bring the energy, keep things flowing, and make it a night to remember. You just enjoy every second and celebrate with your favorite people!
         </p>
+
       </div>
     </section>
 
+    <!-- THE SERVICES -->
+
     <section class="services" id="services">
       <div class="container">
+
         <div class="section-heading">
           <div class="eyebrow">The Services</div>
           <h2>Your Music. Your Moments. Your Night.</h2>
@@ -523,11 +611,15 @@
         </p>
 
         <div class="service-panel">
+
           <div class="service-copy">
+
             <h3>Every detail, thoughtfully brought together.</h3>
+
             <p>
               Personalized playlists, custom reception announcements, professional sound, and lighting. Every detail is thoughtfully brought together to make your day unforgettable.
             </p>
+
           </div>
 
           <ul class="service-list">
@@ -541,32 +633,48 @@
             <li>Wedding rehearsal options available</li>
             <li>Five consecutive hours of service</li>
           </ul>
+
         </div>
       </div>
     </section>
 
+    <!-- START WITH YOUR DATE -->
+
     <section class="date-section" id="date">
       <div class="container date-layout">
+
         <div class="date-copy">
+
           <div class="eyebrow">Start With Your Date</div>
+
           <h2>Let's see if your date is available.</h2>
+
           <div class="gold-rule" style="margin-left:0"></div>
+
           <p>
             Every celebration starts somewhere. Share your wedding date and location, and I'll help you take the next step.
           </p>
+
           <p>
             If your date is available, you can move forward with the $100 retainer or reach out first. I'm always happy to connect by email or arrange a phone call before booking.
           </p>
+
           <p class="small-note">
             Serving Eastern Washington, Northern Idaho, and Western Montana.
           </p>
+
         </div>
 
+        <!-- INQUIRY FORM -->
+
         <div class="inquiry-card">
+
           <h3>Tell me about your day</h3>
+
           <p>Just a few details to get the conversation started.</p>
 
           <form id="availabilityForm">
+
             <div class="field">
               <label for="weddingDate">Wedding date</label>
               <input id="weddingDate" name="date" type="date" required>
@@ -587,7 +695,10 @@
               <textarea id="inquiryMessage" name="message" placeholder="Tell me a little about your plans or ask me anything."></textarea>
             </div>
 
-            <button class="button" id="checkButton" type="submit">Check My Date</button>
+            <button class="button" id="checkButton" type="submit">
+              Check My Date
+            </button>
+
           </form>
 
           <div class="form-result" id="formResult" role="status" aria-live="polite">
@@ -595,59 +706,78 @@
             <p id="resultMessage"></p>
             <div id="resultActions"></div>
           </div>
+
         </div>
       </div>
     </section>
+
+    <!-- RESERVE YOUR DATE -->
 
     <section class="reserve-section" id="reserve">
       <div class="container">
+
         <div class="reserve-card">
+
           <div class="eyebrow">Reserve Your Date</div>
+
           <h2>Let's make it official</h2>
+
           <div class="gold-rule"></div>
-          <div class="reserve-price">$100 retainer · $1,200 total package</div>
+
+          <div class="reserve-price">
+            $100 retainer · $1,200 total package
+          </div>
+
           <p>
             The $100 retainer is applied toward your total booking cost and serves as a down payment to secure your date.
           </p>
+
           <p class="reserve-note">
             Please contact me if you have any questions or would like to find time to talk beforehand.
           </p>
+
           <div class="reserve-actions">
-            <a class="button" href="https://square.link/u/nx0mEi4B" target="_blank" rel="noopener noreferrer">Pay $100 Retainer</a>
-            <a class="button button-outline" href="mailto:Djbradleypnw@gmail.com">Contact DJ Bradley</a>
+
+            <a class="button" href="https://square.link/u/nx0mEi4B" target="_blank" rel="noopener noreferrer">
+              Pay $100 Retainer
+            </a>
+
+            <a class="button button-outline" href="mailto:Djbradleypnw@gmail.com">
+              Contact DJ Bradley
+            </a>
+
           </div>
+
         </div>
       </div>
     </section>
 
-    <section class="video-section" id="party">
-      <div class="container">
-        <div class="eyebrow">A Little Taste of the Energy</div>
-        <h2>Getting the party started</h2>
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/0ZAQ4J4M-Sc"
-            title="DJ Bradley wedding DJ video"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </section>
   </main>
+
+  <!-- FOOTER -->
 
   <footer>
     <div class="container">
+
       <a class="brand" href="#top">DJ Bradley</a>
+
       <p>Wedding DJ & MC · Eastern Washington · Northern Idaho · Western Montana</p>
-      <p><a class="email-link" href="mailto:Djbradleypnw@gmail.com">Djbradleypnw@gmail.com</a></p>
+
+      <p>
+        <a class="email-link" href="mailto:Djbradleypnw@gmail.com">
+          Djbradleypnw@gmail.com
+        </a>
+      </p>
+
       <p>© <span id="year"></span> DJ Bradley. All rights reserved.</p>
+
     </div>
   </footer>
 
+  <!-- AVAILABILITY CHECKER -->
+
   <script>
+
     /*
       GOOGLE CALENDAR CONNECTION
 
@@ -660,40 +790,59 @@
       or
       { "available": false }
 
-      The script should return only availability, not calendar event details.
+      The script should return only availability,
+      not calendar event details.
     */
 
     const AVAILABILITY_ENDPOINT = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
 
     const DJ_EMAIL = "Djbradleypnw@gmail.com";
+
     const RETAINER_LINK = "https://square.link/u/nx0mEi4B";
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const dateInput = document.getElementById("weddingDate");
+
     dateInput.min = new Date().toLocaleDateString("en-CA");
 
     const form = document.getElementById("availabilityForm");
+
     const button = document.getElementById("checkButton");
+
     const result = document.getElementById("formResult");
+
     const resultHeading = document.getElementById("resultHeading");
+
     const resultMessage = document.getElementById("resultMessage");
+
     const resultActions = document.getElementById("resultActions");
 
+
     function showResult(heading, message, actions = "") {
+
       resultHeading.textContent = heading;
+
       resultMessage.textContent = message;
+
       resultActions.innerHTML = actions;
+
       result.classList.add("show");
+
     }
 
+
     function makeEmailLink(subject, body) {
+
       return "mailto:" + DJ_EMAIL +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
+
     }
 
+
     function inquiryDetails(data) {
+
       return [
         "Wedding date: " + data.date,
         "Location: " + data.location,
@@ -702,14 +851,20 @@
         "Message:",
         data.message || "No additional message."
       ].join("\n");
+
     }
 
+
     async function checkAvailability(date) {
+
       if (!AVAILABILITY_ENDPOINT.startsWith("https://")) {
+
         throw new Error("Calendar connection has not been configured.");
+
       }
 
       const url = new URL(AVAILABILITY_ENDPOINT);
+
       url.searchParams.set("date", date);
 
       const response = await fetch(url.toString(), {
@@ -718,79 +873,127 @@
       });
 
       if (!response.ok) {
+
         throw new Error("The calendar check could not be completed.");
+
       }
 
       const data = await response.json();
 
       if (typeof data.available !== "boolean") {
+
         throw new Error("The calendar returned an unexpected response.");
+
       }
 
       return data.available;
+
     }
 
+
     form.addEventListener("submit", async function(event) {
+
       event.preventDefault();
 
       if (!form.reportValidity()) return;
 
       const data = {
+
         date: dateInput.value,
+
         location: document.getElementById("weddingLocation").value.trim(),
+
         email: document.getElementById("contactEmail").value.trim(),
+
         message: document.getElementById("inquiryMessage").value.trim()
+
       };
 
       const details = inquiryDetails(data);
 
       result.classList.remove("show");
+
       button.disabled = true;
+
       button.textContent = "Checking...";
 
       try {
+
         const available = await checkAvailability(data.date);
 
         if (available) {
+
           const emailLink = makeEmailLink(
+
             "Wedding DJ inquiry - " + data.date,
+
             details + "\n\nI'd love to discuss the details and next steps. Please let me know how you'd like to proceed."
+
           );
 
           showResult(
+
             "Your date appears to be available!",
+
             "That's exciting! You can use the retainer link below to move forward, or email me first if you'd like to talk through the details by email or phone. I'll follow up personally after receiving your inquiry.",
+
             '<a class="button" href="' + RETAINER_LINK + '" target="_blank" rel="noopener noreferrer">Pay $100 Retainer</a> ' +
             '<a class="button button-outline" href="' + emailLink.replace(/"/g, "&quot;") + '">Email DJ Bradley</a>'
+
           );
+
         } else {
+
           const emailLink = makeEmailLink(
+
             "Wedding date inquiry - " + data.date,
+
             details + "\n\nI understand the date may be unavailable, but I'd love to ask about other options."
+
           );
 
           showResult(
+
             "That date may already be booked.",
+
             "I'm sorry! Availability can change, so feel free to email me. I'd be happy to talk about your plans and see whether another option might work.",
+
             '<a class="button" href="' + emailLink.replace(/"/g, "&quot;") + '">Email DJ Bradley</a>'
+
           );
+
         }
+
       } catch (error) {
+
         const emailLink = makeEmailLink(
+
           "Wedding DJ availability inquiry - " + data.date,
+
           details + "\n\nCould you please let me know whether this date is available?"
+
         );
 
         showResult(
+
           "Let's check your date together.",
+
           "The online calendar check isn't available right now. No worries — email me your wedding details and I'll personally check the date and get back to you.",
+
           '<a class="button" href="' + emailLink.replace(/"/g, "&quot;") + '">Email DJ Bradley</a>'
+
         );
+
       } finally {
+
         button.disabled = false;
+
         button.textContent = "Check My Date";
+
       }
+
     });
+
   </script>
 
 </body>
